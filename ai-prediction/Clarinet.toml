@@ -1,0 +1,30 @@
+[project]
+name = "ai-stock-prediction"
+description = "AI-powered stock market prediction system on Stacks blockchain"
+authors = []
+telemetry = false
+requirements = []
+
+[contracts.ai-oracle]
+path = "contracts/ai-oracle.clar"
+clarity_version = 2
+epoch = 2.4
+
+[contracts.market-predictor]
+path = "contracts/market-predictor.clar"
+clarity_version = 2
+epoch = 2.4
+
+[contracts.data-storage]
+path = "contracts/data-storage.clar"
+clarity_version = 2
+epoch = 2.4
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = true
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
